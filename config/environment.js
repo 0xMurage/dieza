@@ -1,11 +1,17 @@
 'use strict';
 
 module.exports = function (environment) {
+  const proxyUrl =
+    process.argv.indexOf('--proxy') > -1
+      ? process.argv[process.argv.indexOf('--proxy') + 1]
+      : '';
+
   let ENV = {
     modulePrefix: 'dieza',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    proxyUrl,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
