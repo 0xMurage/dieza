@@ -1,0 +1,58 @@
+/** DEFAULTS **/
+@import "ember-bootstrap/functions";
+@import "ember-bootstrap/variables";
+@import "ember-bootstrap/mixins";
+
+/** Browser default styles reset and root theme**/
+@import "ember-bootstrap/maps";
+@import "ember-bootstrap/root";
+@import "ember-bootstrap/reboot";
+
+/** Remove unused utilities **/
+@import "ember-bootstrap/utilities";
+
+$utilities: map-remove($utilities, "float", "opacity", "overflow", "text-opacity",
+  "text-align", "translate-middle", "viewport-width", "align", "shadow",
+  "position", "order", "font-size", "flex-grow", "flex-shrink", "flex-wrap",
+  "justify-content", "align-items", "align-content", "align-self", "background-color", "bg-opacity"
+);
+
+$utilities: map-get-multiple($utilities,
+    (
+      "flex",
+      "flex-direction",
+      "justify-content",
+      "align-items",
+      "align-content",
+      "margin" "padding",
+      "padding-x",
+      "padding-y",
+    ));
+
+$utilities: map-merge($utilities,
+  ("display": (
+    responsive: true,
+    print: false,
+    property: display,
+    class: d,
+    values: none flex inline-flex
+  ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        100: 100%
+      )),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        100: 100%
+      )),
+  )
+);
+
+@import "ember-bootstrap/utilities/api";
+@import "ember-bootstrap/grid";
+@import "ember-bootstrap/buttons";
+@import "ember-bootstrap/containers";
