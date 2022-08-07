@@ -1,5 +1,14 @@
 
 $border-radius: 0.275rem;
+$theme-colors:(
+"primary":#69bdd2
+);
+
+$navbar-dark-brand-color: #ffff;
+$navbar-dark-active-color: #ffff;
+$navbar-dark-color: #142428;
+
 
 @import "ext/bootstrap";
 
+@import "ember-power-select";

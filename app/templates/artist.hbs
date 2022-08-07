@@ -1,0 +1,13 @@
+{{page-title this.model.name}}
+
+{{#if this.model}}
+  <div class="container mt-3">
+    <Artist::Profile @model={{this.model.artist}} @tracks={{this.model.tracks}}></Artist::Profile>
+
+    <div class="row">
+      {{#each this.model.albums as |album|}}
+        <Cards::Image @url={{album.picture}}></Cards::Image>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}

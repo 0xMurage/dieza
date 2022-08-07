@@ -1,0 +1,26 @@
+@import "ember-bootstrap/functions";
+@import "ember-bootstrap/variables";
+@import "ember-bootstrap/mixins";
+
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px #0000001f, 0 4px 8px #0000000f;
+  }
+
+  .artist-image {
+    height: 267px;
+    background-color: #dcd8c5;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .card {
+    .name {
+      font-size: 14px;
+    }
+  }
+}

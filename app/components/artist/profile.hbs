@@ -1,0 +1,17 @@
+<div class='d-flex'>
+  <section local-class='artist-info'>
+    <h3 local-class='name'>{{@model.name}}</h3>
+    <div local-class='fans'>{{@model.totalFans}} Fans</div>
+    <Card::Image
+      class='{{local-class "image"}}'
+      @url={{@model.picture}}
+      height='300px'
+      width='300px'
+    />
+  </section>
+
+  <section class='top-tracks'>
+    <h3 local-class='title'>Top Tracks</h3>
+    <Artist::Tracks @model={{@tracks}} />
+  </section>
+</div>

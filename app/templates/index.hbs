@@ -1,0 +1,22 @@
+{{page-title "Home"}}
+
+{{#if this.model.length}}
+  <Layout::MainNav @onArtistSelect={{this.onArtistSelect}}></Layout::MainNav>
+{{else}}
+  <div class="container d-flex justify-content-center mt-3">
+    <div class="col-4 mt-5">
+      <Layout::EmptyState @onArtistSelect={{this.onArtistSelect}}></Layout::EmptyState>
+    </div>
+  </div>
+{{/if}}
+
+<div class="container mt-3">
+  <div class="row">
+    {{#each this.model as |artist|}}
+      <div class="col-md-3 g-lg-3 g-2">
+        <Artist::ProfileCard @model={{artist}}
+                             @gotoArtist={{this.gotoArtist}}></Artist::ProfileCard>
+      </div>
+    {{/each}}
+  </div>
+</div>

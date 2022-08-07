@@ -1,0 +1,12 @@
+<PowerSelect
+  @searchEnabled={{true}}
+  @search={{this.search}}
+  @renderInPlace={{@renderInPlace}}
+  @onChange={{@onSelect}}
+  @placeholder='Search artist by name'
+  class='w-100'
+  as |option|
+>
+  <img src='{{option.picture}}?size=sm' alt='' role='presentation' />
+  {{option.name}}
+</PowerSelect>

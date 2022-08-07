@@ -1,0 +1,13 @@
+.artist-info {
+  position: relative;
+
+  .image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .name,.fans{
+    z-index: 50;
+  }
+}

@@ -1,4 +1,9 @@
-{{page-title "Home"}}
+{{page-title "Dieza"}}
 
-
-{{outlet}}
+{{#if this.model.open}}
+  {{outlet}}
+{{else}}
+  <div class="container d-flex mx-auto flex-column">
+    <Notification::NotAvailable></Notification::NotAvailable>
+  </div>
+{{/if}}

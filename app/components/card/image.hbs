@@ -1,0 +1,13 @@
+<picture>
+  <source srcset='{{@url}}?size=xl' media='(min-width: 1200px)' />
+  <source srcset='{{@url}}?size=big' media='(min-width: 650px)' />
+  <source srcset='{{@url}}?medium' media='(min-width: 380px)' />
+  <img
+    src='{{@url}}'
+    loading='lazy'
+    decoding='async'
+    alt=''
+    role='presentation'
+    ...attributes
+  />
+</picture>

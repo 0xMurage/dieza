@@ -1,0 +1,10 @@
+<div class='card' local-class='card'>
+  <Card::Image
+    @url={{@model.cover}}
+    class='card-img-top {{local-class "summary-image"}}'
+  />
+  <section class='card-body'>
+    <h5 class='card-title' local-class='name'>{{@model.title}}</h5>
+    <div local-class='fans'>{{@model.release_date}}</div>
+  </section>
+</div>

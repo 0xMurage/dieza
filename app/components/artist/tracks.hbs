@@ -1,0 +1,10 @@
+<ol local-class='track-list'>
+  {{#each @model as |track|}}
+    <li local-class='track'>
+      <div class='d-flex justify-content-between'>
+        <span local-class='name'>{{track.name}}</span>
+        <span local-class='duration'>{{track.duration}}</span>
+      </div>
+    </li>
+  {{/each}}
+</ol>

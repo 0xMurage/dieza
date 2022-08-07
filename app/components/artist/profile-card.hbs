@@ -1,0 +1,15 @@
+<div
+  class='card'
+  local-class='card'
+  role='button'
+  {{on 'click' (fn @gotoArtist @model)}}
+>
+  <Card::Image
+    @url={{@model.picture}}
+    class='card-img-top {{local-class "artist-image"}}'
+  />
+  <section class='card-body'>
+    <h5 class='card-title' local-class='name'>{{@model.name}}</h5>
+    <div local-class='fans'>{{@model.totalFans}} Fans</div>
+  </section>
+</div>

@@ -1,0 +1,15 @@
+<BsNavbar
+  @type='dark'
+  @toggleBreakpoint={{null}}
+  class='bg-primary {{local-class "navbar"}}'
+  as |navbar|
+>
+  <LinkTo @route='index' class='pr-4 navbar-brand' local-class='logo'>
+    Diezer
+  </LinkTo>
+  <navbar.nav class='mx-auto' as |nav|>
+    <nav.item>
+      <Search::Artist @renderInPlace={{true}} @onSelect={{@onArtistSelect}} />
+    </nav.item>
+  </navbar.nav>
+</BsNavbar>

@@ -49,13 +49,13 @@ export default class TrackModel extends Model {
   @attr()
   alternative;
 
-  @hasMany('artist', { inverse: 'tracks' })
+  @hasMany('artist')
   contributors;
 
-  @belongsTo('artist', { inverse: 'tracks' })
+  @belongsTo('artist')
   artist;
 
-  @belongsTo('album', { inverse: 'tracks' })
+  @belongsTo('album')
   album;
 
   get previewUrl() {
